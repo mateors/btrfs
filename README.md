@@ -1,30 +1,22 @@
 # What is btrfs?
-Its a filesystem for storage device
-Its more than jus a filesystem.
+> Its a filesystem for storage device. Its more than jus a filesystem.
 
-Includes modern features
+## BTRFS Includes modern features
 
- protect your data
+ * Protect your data
+ * Its a "copy-on-write" filesystem
 
- Its a "copy-on-write" filesystem
+## Benefits of copy-on-writes?
 
-
-Benefits of copy-on-writes?
-
- Copies data rather than overwriting.
-
- Benefits data integrity
- 
- copy-on-writes features can be disabled
- 
- btrfs is the most advanced built-in filesystem
-
- some distros use it by default
+ * Copies data rather than overwriting.
+ * Benefits data integrity 
+ * copy-on-writes features can be disabled
+ * btrfs is the most advanced built-in filesystem
+ * some distros use it by default
 
 
 
-Pros and Cons of btrfs
-
+### Pros and Cons of btrfs
 
  * Pro:
 	* snapshots are built-in
@@ -35,36 +27,32 @@ Pros and Cons of btrfs
 	* Checksums: helps ensure data integrity
 	* protects against bitrot etc.
 
+ * Cons:
+	* How it implements raid
+	* RAID is hit or miss
+	* Built-in implementation of RAID
+	* Don't use RAID in btrfs.
+	* some features are unreliable
 
-
-   * Cons:
-		* How it implements raid
-		* RAID is hit or miss
-		* Built-in implementation of RAID
-		* Don't use RAID in btrfs.
-		* some features are unreliable
-
-Consult the status page for the latest info  on feature stability.
-
-https://btrfs.wiki.kernel.org/index.php/Status
+> Consult the status page for the latest info  on feature stability.
+* https://btrfs.wiki.kernel.org/index.php/Status
 
 
 
-Demo time:
+## Demo time:
 
 > sudo fdisk -l
 
 > cat /etc/fstab
 
 ### What is subvolume?
+A BTRFS subvolume is a part of filesystem with its own independent file/directory hierarchy and inode number namespace. Subvolumes can share file extents. A snapshot is also subvolume, but with a given initial content of the original subvolume. A subvolume has always inode number 256.
 
-they are treated as a partition + even more
+> subvolume treated as a partition + even more
 
 > lsblk
 
 > sudo blkid /dev/nameofthedevice
-
-
 
 > sudo btrfs filesystem usage /
 
@@ -85,22 +73,16 @@ they are treated as a partition + even more
 
 > sudo nano /etc/fstab
 
-
-rebot 
+> reboot 
 
 
 > sudo btrfs subvolume list /home
 
-
-
-
 > which btrfs
-
 
 > lsblk
 
 > mkfs.btrfs /dev/sda 
-
 
 > mkdir /mnt/btrfs-data
 
@@ -108,9 +90,7 @@ rebot
 
 > df -h
 
-
 > sudo btrfs subvolume create /mnt/btrfs-data/myvol-1
-
 
 > echo $?
 
