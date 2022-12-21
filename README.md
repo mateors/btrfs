@@ -1,5 +1,5 @@
 # What is btrfs?
-> Its a filesystem for storage device. Its more than jus a filesystem.
+> Its a filesystem for storage device. Its more than just a filesystem.
 
 ## BTRFS Includes modern features
 
@@ -115,3 +115,5 @@ A BTRFS subvolume is a part of filesystem with its own independent file/director
 ## Learning Resource
 * https://docs.kernel.org/filesystems/btrfs.html#:~:text=Btrfs%20is%20a%20copy%20on,open%20for%20contribution%20from%20anyone.
 * https://christitus.com/btrfs-guide/
+* [Modernize your Linux Storage with btrfs!](https://www.youtube.com/watch?v=RPO-fS6HQbY)
+* [BTRFS Guide | The Best Desktop File System](https://www.youtube.com/watch?v=J2QP4onqJKI)
